@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+
+    <!-- style boostrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;1,100;1,400;1,500&family=Roboto:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown">
+            <button class="btn-category" type="button" onclick="openNav()">
+              Category Product
+            </button>
+          </li>
+          <li><a href="#">Store</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-extra">
+        <ul>
+          <li>
+            <a href="#" onclick="openNav()"
+              ><i data-feather="smartphone"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#" onclick="openSide() "><i data-feather="menu"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- nav -->
+    <nav class="dropdown-list" id="nav">
+      <a href="#">Phone</a>
+      <a href="#">Laptop</a>
+      <a href="#">Tablet</a>
+      <a href="#">Other</a>
+    </nav>
+
+    <nav class="nav-side" id="nav-side">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Store</a></li>
+      </ul>
+    </nav>
+
+    <!-- home -->
+    <section class="home" id="home">
+      <div class="home-container">
+        <div class="img">
+          <div
+            id="carouselExampleAutoplaying"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="/assets/michal-kubalczyk-WecngmAT-KY-unsplash.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="/assets/shiwa-id-bFXjg2wSVDo-unsplash.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="/assets/francois-hoang-gYVNvRygCUw-unsplash.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-content">
+          <div class="home-title">
+            <h2>Welcom To</h2>
+            <h1>Gadget Store</h1>
+            <h3>Lorem ipsum dolor sit amet.</h3>
+            <a href="#">Go To Store</a>
+          </div>
+          <div class="home-icon">
+            <img
+              src="/assets/039ef6aa69f021131d6d39088b680caa-transformed.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- script boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- icon -->
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,301 @@
+:root {
+  --pop: "Poppins", sans-serif;
+  --robot: "Roboto", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+}
+
+body {
+  font-family: var(--pop);
+  min-height: 10000px;
+}
+
+dl,
+ol,
+ul {
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999999;
+  background-color: #ffffff;
+  transition: 0.2s ease;
+}
+
+.header.active {
+  background-color: #8c00ff;
+}
+
+.header .nav {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+.header .nav-extra {
+  display: none;
+  justify-content: center;
+  padding: 15px;
+  z-index: 99999;
+}
+
+.header .nav-extra ul {
+  display: flex;
+  gap: 30px;
+}
+
+.header .nav-extra li {
+  list-style: none;
+}
+
+.header .nav-extra li a {
+  border: none;
+  color: #ffffff;
+  background: none;
+}
+
+.header.active .nav-extra li a {
+  color: #fff;
+}
+
+.header .nav ul {
+  display: flex;
+  gap: 50px;
+}
+
+.header .nav li {
+  list-style: none;
+}
+
+.header .nav li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header.active .nav li a,
+.header.active .nav li button {
+  color: #fff;
+}
+
+.header .nav li button {
+  border: none;
+  background: none;
+}
+
+.nav li:hover .dropdown-list {
+  transform: translateY(0px);
+}
+
+.dropdown-list {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 9;
+  display: none;
+  justify-content: center;
+  gap: 50px;
+  background-color: #8c00ff;
+  padding: 20px;
+  padding-top: 75px;
+  z-index: 999;
+}
+
+.dropdown-list.active {
+  display: flex;
+  transform: translateY(-200px);
+  opacity: 0;
+  animation: navOpen 0.2s ease forwards;
+}
+
+.nav-side {
+  position: fixed;
+  top: 0;
+  background-color: #8c00ff;
+  display: none;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  animation: navOpen 0.2s ease forwards;
+}
+
+.nav-side ul {
+  padding-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-side li {
+  list-style: none;
+}
+
+.nav-side a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+@keyframes navOpen {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.dropdown-list a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-list {
+  display: flex;
+}
+
+/* home */
+.home {
+  /* min-height: 100vh; */
+  align-items: center;
+  display: flex;
+  /* justify-content: center; */
+}
+
+.carousel {
+  max-width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  width: 100%; /* Mengisi lebar carousel dengan gambar */ /* Menjaga rasio aspek gambar */
+}
+
+.home-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-content .home-title h2 {
+  font-size: 2.8rem;
+}
+
+.home-content .home-title h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: var(--robot);
+  border-bottom: solid #8c00ff;
+  margin-bottom: 20px;
+}
+
+.home-content .home-title h3 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+.home-content .home-title a {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #8c00ff;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.home-content .home-icon img {
+  filter: drop-shadow(10px 10px 10px);
+}
+
+/* responsive */
+@media screen and (max-width: 1024px) and (min-width: 520px) {
+}
+
+@media screen and (max-width: 520px) {
+  .header {
+    background-color: #8c00ff;
+  }
+
+  .header.active {
+    background-color: #8c00ff;
+  }
+
+  .header .nav {
+    display: none;
+  }
+
+  .dropdown-list {
+    gap: 20px;
+    font-size: 0.8rem;
+    padding: 10px;
+    padding-top: 65px;
+  }
+
+  .header .nav-extra {
+    display: flex;
+  }
+
+  .nav-side.active {
+    display: flex;
+  }
+
+  .home-content .home-title h2 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+  }
+
+  .home-content .home-title h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .home-content .home-title h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .home-content .home-title a {
+    font-size: 0.8rem;
+  }
+
+  .home-content .home-title {
+    padding-bottom: 50px;
+  }
+
+  .home-content {
+    display: block;
+    text-align: center;
+  }
+
+  .home-content .home-icon img {
+    width: 280px;
+    max-width: 100%;
+  }
+}
